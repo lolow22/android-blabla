@@ -26,12 +26,12 @@ public class Main2Activity extends AppCompatActivity {
                 EditText editdestination = findViewById(R.id.edit_destination);
                 String destination = editdestination.getText().toString();
                 if(editdeparture.length()==0 || destination.length()==0){
-                    Toast.makeText(Main2Activity.this, "alert", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Main2Activity.this, "Enter Departure and Destination", Toast.LENGTH_SHORT).show();
                 }else {
                     Intent appel = new Intent(Main2Activity.this, ItineraryListActivity.class);
                     startActivity(appel);
 
-                    appel.putExtra("departure", editdeparture.getText().toString());
+                    appel.putExtra("depart", editdeparture.getText().toString());
                     appel.putExtra("destination", destination);
                     startActivity(appel);
                 }
